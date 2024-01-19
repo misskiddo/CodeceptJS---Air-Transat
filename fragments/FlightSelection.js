@@ -6,9 +6,6 @@ module.exports = {
 
   // Locators
   oneWayTab : '#OW-tab',
-
-
-
   originCityLocator : '#departureOriginDropDown-input',
   originDropdownLocator : '#departureOriginDropDown-list', 
   destinationCityLocator : '#departureDestinationDropDown-input',
@@ -19,8 +16,6 @@ module.exports = {
   activeDestinationCity : '.liItem-departureDestinationDropDown.active',
   continueButton : '.TS-btn.btn-whiterabbit.TS-focusable.stepSetContinue.btnUpdateLevel',
    
-
-
   // Methods 
 
   // Select One-Way Tab and verify that the to-Date field is not displayed
@@ -29,15 +24,12 @@ module.exports = {
     I.dontSee(this.destinationCityLocator);
   },
 
-  
-
   async selectOriginCity(origin){
     I.click(this.originCityLocator); 
     I.clearField(this.originCityLocator);
     I.fillField(this.originCityLocator, origin);
     I.waitForText(origin, 5, this.activerOriginCityDropdown);
-    I.pressKey('Enter');
-    
+    I.pressKey('Enter');    
   },
 
   async selectDestinationCity(destination){

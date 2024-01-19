@@ -4,8 +4,6 @@ var checkIn = require('../testdata/checkIn.js')();
 
 Feature('Check-In');
 
-
-
 Before(({I}) => { 
    I.amOnPage('https://www.airtransat.com/en-CA/online-check-in?');
    tryTo(() => I.click('.closeCookieLegalNotice.TS-btn.btn-level1'));
@@ -23,10 +21,5 @@ Before(({I}) => {
     I.checkOption('.checkbox-label.checkbox-label-agreement');
     I.click('#webcheckin-btnFind');
 
-    I.see('Error', '#webCheckInError-modalTitle');
-
-
-
-    
-
+    I.see('Error', '#webCheckInError-modalTitle'); 
   });

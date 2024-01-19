@@ -6,8 +6,6 @@ Before(({I}) => {
   });
 
 Scenario('E2E Scenario 1 - Round Trip  @E2E',  async ({ I, FlightSelection, TimeSelection, SeatSelection, Passenger, Insurance, Payment }) => {
-
-
     var origin = "Vanc";
     var destination = 'Montre';
     // Select Origin and Destination City
@@ -64,12 +62,9 @@ Scenario('E2E Scenario 1 - Round Trip  @E2E',  async ({ I, FlightSelection, Time
     
     Payment.fillPaymentInformation(paymentInfo);
     Payment.clickAgreeMessages();
-
     Payment.clickPay();
 
     I.see('Sorry, an error occurred'); // Because payment failed
-
-    pause();
 });
 
 
