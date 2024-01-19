@@ -1,5 +1,11 @@
 # Air Transat Test Suite
 By Toñi Cabrera
+Automation of the Air Transat site using CodeceptJS as a framework.
+
+The following scenarios have been automated:
+* E2E booking flow: Search, select tariff, seat selection, Passenger Information, and Payment (which will fail)
+* Check-in
+* Negative test case: Invalid passengers
 
 # Requirements
 * nodejs version 12+
